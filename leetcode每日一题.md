@@ -1,3 +1,6 @@
+
+```toc
+```
 # 9.20 
 # 198.打家劫舍
 ## 时间:
@@ -166,7 +169,7 @@ let maxProfit = function(prices) {
     return max
 }
 ```
-## L.122 买卖股票的最佳时机2
+# L.122 买卖股票的最佳时机2
 ## 时间:
 2023-10-3
 ## 思路:
@@ -206,16 +209,22 @@ const maxProfit = function (prices) {
 };
 
 //语意化
-const maxProfit = function (prices) {
-    let n = prices.length;
-    let sell = 0;
-    let buy = -prices[0];
-    for (let i = 1; i < n; i++) {
-        sell = Math.max(sell, buy + prices[i]);
-        buy = Math.max(buy, sell - prices[i]);
-    }
-    return sell;
+function maxProfit(prices) {
+  const len = prices.length;
+  if (len < 2) {
+    return 0;
+  };
+  let unhold = 0;	// 当天没有持有的情况下，最大的利润
+  let hold = -prices[0]; // 当天持有的情况下，最大的利润
+  for (let i = 1; i < len; i++) {
+    const temp = unhold;  // 求今天的hold时，要用到昨天的unhold，暂存一下昨天的unhold
+    unhold = Math.max(unhold, hold + prices[i]); // 求今天的unhold
+    hold = Math.max(hold, temp - prices[i]);     // 求今天的hold
+  }
+  return unhold;
 };
-
-https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
 ```
+作者：笨猪爆破组
+链接： https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/solutions/476997/shou-hua-tu-jie-xiang-jie-duo-chong-jie-fa-mai-mai/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
