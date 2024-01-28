@@ -1,7 +1,7 @@
 # js-leetcode
 My own record of writing algorithms based on JavaScript
 
-#刷题记录-代码随想录
+# 刷题记录-代码随想录
 - [本地环境搭建](代码随想录.md#本地环境搭建)
   - [自定义代码片段](代码随想录.md#自定义代码片段)
 - [数组](代码随想录.md#数组)
@@ -85,3 +85,4 @@ My own record of writing algorithms based on JavaScript
   - [不同路径](代码随想录.md#不同路径)
   - [不同路径Ⅱ-有障碍物](代码随想录.md#不同路径ⅱ-有障碍物)
   - [整数拆分](代码随想录.md#整数拆分)
+  - [不同的二叉搜索树](代码随想录.md#不同的二叉搜索树)
